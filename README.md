@@ -7,7 +7,7 @@
 ## 集成方式
 
 1. 原生工程接口启动
-2. Spring Boot工程接口启动
+2. Spring Boot工程接口启动(集成ui环境)
 
 ## flume集成
 
@@ -47,3 +47,22 @@ zipkin.channels.memoryChannel.capacity = 100
 ```
 
 nohup flume-ng agent -n zipkin -c conf -f conf/flume-zipkin-conf.properties &
+
+
+## elasticsearch集成
+
+执行bootstrap工程从kafka读取数据
+
+index截图
+
+![](./src/es-index.png) 
+
+span截图
+
+![](./src/es-index.png)
+ 
+ 
+## 问题汇总
+
+1. kafka的offset默认smallest,如何维护group对应的offset是否和spark一样需要自己手动维护,需要验证
+2. 1.32的zipkin会多生成一个type类型
