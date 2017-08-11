@@ -74,5 +74,6 @@ span明细
  
 ## 问题汇总
 
-1. kafka的offset默认smallest,如何维护group对应的offset是否和spark一样需要自己手动维护,需要验证
+1. kafka的offset默认smallest,< 0.8.1,offset会把offset保存再zk中,性能较差,0.10版本+,kafka直接维护offset,需要自己去设置,当前demo使用0.8
 2. 1.32的zipkin会多生成一个type类型
+
