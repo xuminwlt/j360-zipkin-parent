@@ -60,7 +60,17 @@ index截图
 span截图
 
 ![](./src/es-index.png)
- 
+
+UI
+
+traces列表
+
+![](./src/es-zipkin-trace.png)
+
+span明细
+
+![](./src/es-span-trace.png)
+
  
 ## 问题汇总
 
